@@ -47,6 +47,7 @@ h6 {
   margin: 0;
   padding: 0;
   line-height: normal;
+  color: #fff;
 }
 
 p,
@@ -364,10 +365,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Skills Css ************/
 .react-multiple-carousel__arrow--right {
-  right: calc(0% + 1px);
+  /* right: calc(0% + 1px); */
+  right: 0 !important;
 }
+
 .react-multiple-carousel__arrow--left {
-  left: calc(0% + 1px);
+  /* left: calc(0% + 1px); */
+  left: 0 !important;
+}
+
+.carousel-indicators {
+  visibility: hidden;
 }
 
 .skill {
@@ -376,16 +384,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .skill-bx {
-  background: linear-gradient(to right, #000000 0%, #4a2939 100%);
+  background: linear-gradient(to right, #1b1619 0%, #4a2939 100%);
   border-radius: 64px;
   text-align: center;
   padding: 60px 50px;
   margin-top: -60px;
+  height: 350px;
+  border: 5px solid;
 }
 
 .skill h2 {
   font-size: 45px;
   font-weight: 700;
+  color: #fff;
 }
 
 .skill p {
@@ -427,6 +438,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 45px;
   font-weight: 700;
   text-align: center;
+  color: #fff;
 }
 
 .project p {
@@ -436,7 +448,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 1.5em;
   margin: 14px auto 30px auto;
   text-align: center;
-  width: 56%;
+  width: 100%;
 }
 
 .project .nav.nav-pills {
@@ -564,22 +576,29 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Projects Css ************/
 .contact {
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-  padding: 60px 0 200px 0;
+  /* padding: 60px 0 200px 0; */
   padding: 60px 0 60px 0;
+  border-top-right-radius: 100px;
 }
 
-.contact .connect{
+/* button connect */
+.btn:first-child:hover,
+:not(.btn-check)+.btn:hover {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+.contact .connect {
   position: absolute;
-    margin-top: -85px;
-    background: #ffffff;
-    color: #000;
-    width: 100px;
-    height: 45px;
-    text-align: center;
-    padding: 10px;
-    font-weight: 700;
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 20px;
+  margin-top: -85px;
+  background: #ffffff;
+  color: #000;
+  width: 100px;
+  height: 45px;
+  text-align: center;
+  padding: 10px;
+  font-weight: 700;
+  left: 20px;
 }
 
 .contact img {
@@ -665,20 +684,30 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Footer Css ************/
 .footer {
-  /* padding: 0 0 50px 0; */
-  background-image: url('./assets/img/footer-bg.png');
+  /* background-image: url('./assets/img/footer-bg.png');
   background-position: center center;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+  background: linear-gradient(90.21deg, #b6acb2 -5.91%, #4A2FBD 111.58%);
+  border: 1px solid;
 }
 
 .newsletter-bx {
   background: #e9c052;
-  border-radius: 55px;
+  border-radius: 50px;
   color: #121212;
   padding: 40px 40px;
+  border-top-left-radius: 5px;
   /* margin-bottom: 80px;
   margin-top: -70px; */
+}
+
+.newsletter-bx .btn-down-cv {
+  color: #764444;
+}
+
+.newsletter-bx .btn-down-cv:hover {
+  color: #4e77b4;
 }
 
 .newsletter-bx h3 {
@@ -746,7 +775,79 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .footer p {
   font-weight: 400;
   font-size: 14px;
-  color: #B8B8B8;
+  color: #fbfbfb;
   letter-spacing: 0.5px;
   margin-top: 20px;
+}
+
+/* css form todo */
+
+@import '~antd/dist/antd.css';
+
+.ant-select-multiple .ant-select-selection-item {
+  height: 27px;
+}
+
+.btn-title-todo {
+  background: #fff;
+  position: absolute;
+  margin-top: -55px;
+  height: 50px;
+  width: auto;
+  padding: 15px;
+  border-radius: 10px;
+  color: #000;
+  right: 20px;
+  font-weight: 700;
+}
+
+#todos {
+  background-image: url(./assets/img/color-sharp.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 30px;
+}
+
+.cv-contact {
+  background: linear-gradient(90.21deg, #5e5840 -5.91%, #383772 111.58%);
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+.cv-contact .btn-show-hide {
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+}
+
+.cv-contact .btn-show-hide button {
+  width: 120px;
+  height: 50px;
+  color: white;
+  border: solid 3px transparent;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #78e4ff, #ff48fa);
+  background-origin: border-box;
+  box-shadow: 2px 1000px 1px #000 inset;
+  border-radius: 10px;
+}
+
+.cv-contact .btn-show-hide button:nth-child(1) {
+  margin-right: 10px
+}
+
+.cv-contact .btn-show-hide button:nth-child(2) {
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #ff48fa, #78e4ff);
+}
+
+.cv-contact .btn-show-hide span {
+  border-right: 2px solid;
+  margin: 10px;
+  padding: 10px 0;
+}
+
+.cv-contact iframe {
+  width: 100%;
+  height: 600px;
+  padding: 10px;
+  zoom: 100%;
 }
