@@ -46,8 +46,8 @@ export const Skills = () => {
                   <div className="item">
                     <img src={Shield} alt="" />
                     <h3>Activitives</h3>
-                    <h6>NGN Corp</h6>
-                    <small>Participating develop website introduce and mobile chat application,...</small>
+                    <h5>NGN Corp</h5>
+                    <h6>Participating develop website introduce and mobile chat application,...</h6>
                   </div>
                 </Carousel.Item>
 
@@ -55,8 +55,8 @@ export const Skills = () => {
                   <div className="item">
                     <img src={Send} alt="" />
                     <h3>Experience</h3>
-                    <h6>MWG Software</h6>
-                    <small>Front-end Developer VueJS, Javascript Dev UX/UI, Web API</small>
+                    <h5>MWG Software</h5>
+                    <h6>Front-end Developer VueJS, Javascript Dev UX/UI, Web API</h6>
                   </div>
                 </Carousel.Item>
               </Carousel>
