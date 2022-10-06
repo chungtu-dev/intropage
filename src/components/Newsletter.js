@@ -24,7 +24,7 @@ export const Newsletter = () => {
       <div className="newsletter-bx wow slideInUp">
         <Row>
           <Col lg={12} md={12} xl={12}>
-            <ul>
+            <ul className="newsletter-lst">
               <li>
                 <span>Mobile: 0981821203</span>
               </li>

@@ -132,6 +132,8 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
   padding: 0 25px;
   font-size: 18px;
   opacity: 0.75;
+  margin: 10px;
+  padding-bottom: 5px;
 }
 
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
@@ -194,7 +196,7 @@ span.navbar-text {
   border: 1px solid #fff;
   padding: 18px 34px;
   font-size: 18px;
-  margin-left: 18px;
+  /* margin-left: 18px; */
   position: relative;
   background-color: transparent;
   transition: 0.3s ease-in-out;
@@ -215,6 +217,7 @@ span.navbar-text {
   top: 0;
   z-index: -1;
   transition: 0.3s ease-in-out;
+  border-radius: 10px;
 }
 
 .navbar-text button:hover {
@@ -387,7 +390,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: linear-gradient(to right, #1b1619 0%, #4a2939 100%);
   border-radius: 64px;
   text-align: center;
-  padding: 60px 50px;
+  padding: 60px 0px;
   margin-top: -60px;
   height: 350px;
   border: 5px solid;
@@ -850,4 +853,51 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   height: 600px;
   padding: 10px;
   zoom: 100%;
+}
+
+/* responsive */
+@media screen and (max-width: 350px) {
+  .carousel-control-next-icon, .carousel-control-prev-icon{
+    visibility: hidden;
+  }
+  #todos{    
+    padding: 20px 0;
+  }
+  .btn-title-todo{
+    height: 40px;
+    padding: 10px;
+    margin-top: -50px;
+  }
+  .ant-input-group-compact{
+    display: flex;
+    flex-direction: column;
+    margin-top: -50px;
+  }
+  .newsletter-lst li{
+    font-size: 13px;
+  }
+  .project p{
+    font-size: 13px;
+  }
+  .skill-slider .item h6{
+    font-size: 13px;
+  }
+  .banner h1{
+    font-size: 38px;
+  }
+  .banner p{
+    font-size: 14px;
+  }
+  .banner{
+    padding: 260px 0 0;
+  }
+  .project{
+    padding: 0;
+  }
+  .contact{
+    padding: 75px 0 59px 0;
+  }
+  .newsletter-bx{
+    margin-top: 15px;
+  }
 }
